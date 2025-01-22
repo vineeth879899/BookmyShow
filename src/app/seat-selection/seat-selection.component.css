@@ -1,0 +1,85 @@
+
+  /* General Styling */
+  .container {
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+
+  h2 {
+    font-weight: bold;
+    color: #007bff;
+    font-size: 1.8rem; /* Adjusted heading size */
+  }
+
+  /* Seat Grid Styling */
+  .seat-grid {
+    max-width: 1000px; /* Increased grid width for 30 columns */
+    background-color: #f8f9fa;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+  }
+
+  .seat-row {
+    display: flex;
+    justify-content: center;
+    /* Wrap rows to avoid overflow */
+  }
+
+  .seat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2px; /* Add margin for better spacing */
+  }
+
+  .seat-checkbox {
+    width: 28px; /* Reduced checkbox size slightly */
+    height: 28px;
+    cursor: pointer;
+  }
+
+  .seat-checkbox:checked + .seat-number {
+    color: white;
+    background-color: #007bff;
+    border-radius: 50%;
+    padding: 4px;
+    font-weight: bold;
+    font-size: 0.8rem; /* Adjusted font size */
+  }
+
+  .seat-number {
+    font-size: 0.8rem; /* Reduced text size for unselected seat numbers */
+    margin-top: 3px;
+    color: #007bff;
+    text-align: center;
+  }
+
+  /* Selected Seats Section */
+  .selected-count {
+    color: #28a745;
+    font-size: 1.3rem; /* Adjusted text size for the count */
+  }
+
+  /* Button Styling */
+  .btn {
+    width: 220px; /* Slightly smaller button */
+    font-size: 16px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+
+  
+  .card-img-top {
+    max-width: 200px; /* Limit the maximum width */
+    height: auto;    /* Maintain aspect ratio */
+    margin: 0 auto;  /* Center the image */
+  }
+

@@ -1,0 +1,7 @@
+
+    .card-img-top {
+      max-width: 200px; /* Limit the maximum width */
+      height: auto;    /* Maintain aspect ratio */
+      margin: 0 auto;  /* Center the image */
+    }
+ 

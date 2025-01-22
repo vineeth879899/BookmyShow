@@ -1,0 +1,36 @@
+.carousel-item img {
+    height: 400px; /* Fixed height for carousel images */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+  }
+  /* src/app/your-component/your-component.component.css */
+body, html {
+    overflow-x: hidden;
+  }
+  
+  .carousel {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-inner {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  .carousel-item {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .carousel-img {
+    object-fit: cover; 
+    width: 100%; 
+  }
+  
+ 
+   
+  .card-img-top {
+    max-width: 200px; /* Limit the maximum width */
+    height: auto;    /* Maintain aspect ratio */
+    margin: 0 auto;  /* Center the image */
+  }
+

@@ -1,0 +1,49 @@
+
+<app-navbar></app-navbar>
+<div class="container mt-4">
+  <!-- Header Section -->
+  <div class="cart-container">
+    <div class="header d-flex justify-content-between bg-primary text-white p-2 rounded">
+      <span>#</span>
+      <span>Seat Number</span>
+      <span>Ticket Price</span>
+    </div>
+    
+    <!-- Ticket Rows -->
+    <div
+      class="ticket-row d-flex justify-content-between p-2 border-bottom"
+      *ngFor="let ticket of bookedTickets; let i = index"
+    >
+      <span>{{ i + 1 }}</span>
+      <span>{{ ticket.row }}{{ ticket.col }}</span>
+      <span>₹{{ ticket.price }}</span>
+    </div>
+  </div>
+
+  <!-- Total Amount Section -->
+  <div class="total-amount text-center mt-3">
+    <p class="h5">
+      <strong>Total Amount: ₹{{ totalAmount }}</strong>
+    </p>
+  </div>
+</div>
+
+  
+  <!-- Total Amount and Pay Button -->
+<div class="total-amount text-center mt-4">
+  <button class="btn btn-success btn-lg" (click)="openPaymentDialog()">Pay</button>
+</div>
+
+<!-- <div class="payment-dialog" *ngIf="isPaymentSuccessful">
+  <div class="dialog-overlay">
+    <div class="dialog-content">
+      <h3>Payment Successful</h3>
+      <p>Total Amount: ₹{{ totalAmount }}</p>
+      <button class="btn btn-primary" (click)="closePaymentDialog()">Close</button>
+    </div>
+  </div>
+</div> -->
+
+
+
+

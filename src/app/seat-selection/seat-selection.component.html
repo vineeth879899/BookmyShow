@@ -1,0 +1,72 @@
+<app-navbar></app-navbar>
+<div class="container mt-5">
+
+  <div class="container mt-5">
+    <div class="row">
+      <!-- Movie Poster -->
+      <div class="col-md-2">
+        <img [src]="movieImage" alt="image for ciname" class="card-img-top img-fluid rounded">
+      </div>
+
+      <!-- Movie Details -->
+      <div class="col-md-10">
+        <h1 class="display-4">{{ movieTitle }}</h1>
+        <div class="d-flex align-items-center mb-3">
+          <span class="badge bg-danger me-2">9/10</span>
+          <small>(60.3K Votes)</small>
+        </div>
+        <p class="lead">2h 24m &bull; {{movieDescription}} &bull; UA13+</p>
+        <p>Release Date: <strong>{{releaseDate}}</strong></p>
+        <div>
+          <button class="btn btn-primary me-2">Rate now</button>
+          <button class="btn btn-danger">Book tickets</button>
+        </div>
+      </div>
+    </div>
+
+
+  <!-- <div
+    class="text-center mb-4"
+    *ngIf="movieTitle && movieImage"
+    style="display: flex; align-items: center; justify-content: center"
+  >
+    <img
+      [src]="movieImage"
+      class="img-fluid mb-3"
+      alt="{{ movieTitle }}"
+      style="max-height: 200px; margin-right: 20px"
+    />
+    <h3>{{ movieTitle }}</h3>
+  </div> -->
+
+  <!-- Seat Selection Grid -->
+  <div class="border rounded p-4 mt-5 shadow">
+    <div
+      *ngFor="let row of rows.slice(0, 5); let i = index"
+      class="d-flex justify-content-center mb-3"
+    >
+      <label
+        *ngFor="let col of cols.slice(0, 20); let j = index"
+        class="seat-container mx-1"
+      >
+        <input
+          type="checkbox"
+          class="seat-checkbox"
+          (change)="onCheckboxChange(i, j, $event)"
+          [checked]="seats[i][j]"
+        />
+        <span class="seat-number">{{ i * 10 + j + 1 }}</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Selected Seats and Button -->
+  <div class="text-center mt-4">
+    <p class="font-weight-bold mb-3">
+      Selected Seats: <span class="selected-count">{{ selectedCount }}</span>
+    </p>
+    <button class="btn btn-primary btn-lg px-4 py-2" (click)="goToCart()">
+      Go to Cart
+    </button>
+  </div>
+</div>

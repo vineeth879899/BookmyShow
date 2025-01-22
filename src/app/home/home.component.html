@@ -1,0 +1,102 @@
+<app-navbar></app-navbar>
+<div class="mt-0">
+  <!-- Carousel -->
+  <div
+    id="carouselExampleIndicators"
+    class="carousel slide"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
+    </div>
+    <div class="carousel-inner" data-bs-interval="100">
+      <!-- Set interval to 2 seconds -->
+      <div class="carousel-item active carousel-img">
+        <img
+          src="../../assets/images/a1.avif"
+          class="d-block w-100 carousel-img"
+          alt="Movies"
+        />
+      </div>
+      <div class="carousel-item carousel-img">
+        <img
+          src="../../assets/images/a2.avif"
+          class="d-block w-100 carousel-img"
+          alt="Sports"
+        />
+      </div>
+      <div class="carousel-item carousel-img">
+        <img
+          src="../../assets/images/s3.avif"
+          class="d-block w-100 carousel-img"
+          alt="Events"
+        />
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Cards Section -->
+
+  <div class="container mt-4">
+    <h2>Recommended Movies</h2>
+    <div class="row mt-4">
+      <div class="col-md-3" *ngFor="let movie of movies">
+        <div class="boader-0 mt-4">
+          <!-- Image with custom CSS -->
+          <img
+            [src]="movie.image"
+            class="card-img-top"
+            alt="{{ movie.title }}"
+          />
+          <div class="card-body mt-4">
+            <h5 class="card-title">{{ movie.title }}</h5>
+            <p class="card-text">{{ movie.description }}</p>
+            <a
+              [routerLink]="movie.link"
+              [queryParams]="{ title: movie.title, image: movie.image, description:movie.description}"
+              class="btn btn-primary"
+              >Book</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

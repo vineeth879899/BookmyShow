@@ -1,0 +1,8 @@
+body {
+    background-image: url('/src/assets/images/r.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+  

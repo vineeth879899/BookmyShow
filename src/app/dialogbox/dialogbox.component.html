@@ -1,0 +1,9 @@
+<div class="payment-dialog" *ngIf="isPaymentSuccessful">
+    <div class="dialog-overlay">
+      <div class="dialog-content">
+        <h3>Payment Successful</h3>
+        <p>Total Amount: ₹{{ totalAmount }}</p>
+        <button class="btn btn-primary" routerLink="/home">Close</button>
+      </div>
+    </div>
+  </div>

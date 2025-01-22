@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+  
+  <div class="container mt-4">
+    <h2>Movies List</h2>
+    <div class="row mt-4">
+      <div class="col-md-3" *ngFor="let movie of movies">
+        <div class=" boader-0 mt-4">
+          <!-- Image with custom CSS -->
+          <img [src]="movie.image" class="card-img-top" alt="{{ movie.title }}">
+          <div class="card-body mt-4">
+            <h5 class="card-title">{{ movie.title }}</h5>
+            <p class="card-text">{{ movie.description }}</p>
+            <a [routerLink]="movie.link" [queryParams]="{ title: movie.title, image: movie.image }" class="btn btn-primary">Book</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
